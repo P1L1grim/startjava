@@ -7,12 +7,12 @@ public class Calculator {
     	Scanner in = new Scanner(System.in);
 	    try{
 	    System.out.println("Введите первое число!");
-	    Double num1 = in.nextDouble();
+	    double num1 = in.nextDouble();
 	    System.out.println("Вы ввели: " + num1);
 	    System.out.println("Введите второе число!");
-	    Double num2 = in.nextDouble();
+	    double num2 = in.nextDouble();
 	    System.out.println("Вы ввели: " + num2);
-	    System.out.println("Введите математический символ + , - , / , * или % ");
+	    System.out.println("Введите математический символ + , - , / , * , ^ или % ");
 	    String oper = in.next();
 	    System.out.println("Вы ввели: " + oper);
 	        switch (oper) {
@@ -20,6 +20,7 @@ public class Calculator {
 	            case "+": System.out.println("Выбранная операция - сложение, " + num1 + " + " + num2 + " = " + (num1 + num2)); break;
 	            case "/": System.out.println("Выбранная операция - деление, " + num1 + " / " + num2 + " = " + (num1 / num2)); break;
 	            case "*": System.out.println("Выбранная операция - умножение, " + num1 + " * " + num2 + " = " + (num1 * num2)); break;
+	            case "^": System.out.println("Выбранная операция - возведение в степень, " + num1 + " ^ " + num2 + " = " + Math.pow(num1,num2)); break;
 	            case "%": System.out.println("Выбранная операция - деление по модулю, " + num1 + " % " + num2 + " = " + (num1 % num2)); break;
 	            default: System.out.println("Данный символ не включен в функционал нашего калькулятора");
 	            }
