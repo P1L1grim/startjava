@@ -7,8 +7,8 @@ public class CalculatorTest {
     	Scanner in = new Scanner(System.in);
     	Calculator clc = new Calculator();
     	String prod = "Y";
-    	do {
-		    try {
+    	try {	
+    		do {		    
 		    	System.out.println("Введите первое число!");
 		   		clc.setNum1(in.nextDouble());
 
@@ -27,8 +27,10 @@ public class CalculatorTest {
 		 			if (prod.equalsIgnoreCase("N")){break;}
 
 		 		} while (!prod.equalsIgnoreCase("Y"));  
-		    }
-		    catch (Exception ex) {System.out.println("Некорректный ввод");}
-		} while (prod.equalsIgnoreCase("Y"));
+
+		    } while (prod.equalsIgnoreCase("Y"));
+		} 
+		catch (Exception ex) {System.out.println("Некорректный ввод");}
+		
     }           
 }
